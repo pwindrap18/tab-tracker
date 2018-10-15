@@ -11,9 +11,9 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-app.get('/', (req, res) => {
+app.post('/register', (req, res) => {
     res.send({
-        message: 'hellooo'
+        message: `hellooo ${req.body.email}`
     })
 })
 
